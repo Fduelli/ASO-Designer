@@ -6,7 +6,7 @@ function editSequence() {
     for(let i = 0; i <length; i++) {
         if (i==0) {
             ideSeq += "/52MOEr" + sequenceInput.substring(i, i+1) + "/*";
-        } else if (i==sequenceInput.length()-1) {
+        } else if (i==length-1) {
             ideSeq += "/32MOEr" + sequenceInput.substring(i, i+1) + "/";
         } else {
             ideSeq += "/i2MOEr" + sequenceInput.substring(i, i+1) + "/*";
