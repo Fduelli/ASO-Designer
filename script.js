@@ -11,6 +11,9 @@ function editSequence() {
             ideSeq += "/i2MOEr" + sequenceInput.substring(i, i+1) + "/*";
         }
     }
-    // Display the edited sequence
-    document.getElementById('output').innerText = `IDE annotated Sequence: ${ideSeq}`;
+
+    document.getElementById('modalBody').innerText = ideSeq;
+
+    // Show the modal using jQuery
+    $('#resultModal').modal('show');
 }
