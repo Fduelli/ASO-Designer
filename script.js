@@ -2,7 +2,8 @@ function editSequence() {
     let sequenceInput = document.getElementById('sequenceInput').value.toUpperCase();
     // Add logic to modify the sequence
     let ideSeq = "";
-    for(let i = 0; i <sequenceInput.length; i++) {
+    let length = sequenceInput.length
+    for(let i = 0; i <length; i++) {
         if (i==0) {
             ideSeq += "/52MOEr" + sequenceInput.substring(i, i+1) + "/*";
         } else if (i==sequenceInput.length()-1) {
