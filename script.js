@@ -13,8 +13,5 @@ function editSequence() {
         }
     }
 
-    document.getElementById('modalBody').innerText = ideSeq;
-
-    // Show the modal using jQuery
-    $('#resultModal').modal('show');
+    document.getElementById('output').innerText = `IDE Annotated Sequence: ${ideSeq}`;
 }
