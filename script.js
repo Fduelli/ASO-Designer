@@ -7,6 +7,7 @@ function editSequence() {
     }else if (type.substring(0,1) === "G") {
         editSequenceGapmer();
     }
+    toggleCopyButton();
 }
 
 function editSequenceMOE() {
