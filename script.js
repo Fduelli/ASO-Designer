@@ -56,7 +56,35 @@ function initializeDropdown() {
     });
 }
 
+function toggleCopyButton() {
+    const outputElement = document.getElementById('output');
+    const copyButton = document.getElementById('copyButton');
+    
+    // Check if the outputElement has inner text
+    if (outputElement.innerText.trim().length > 0) {
+        // If it has text, display the button (remove 'd-none' class)
+        copyButton.classList.remove('d-none');
+    } else {
+        // If it is empty, hide the button (add 'd-none' class)
+        copyButton.classList.add('d-none');
+    }
+}
+
+function copyTextToClipboard() {
+    const outputElement = document.getElementById('output');
+    const textToCopy = outputElement.innerText;
+
+    navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+            console.log('Text copied to clipboard');
+        })
+        .catch(err => {
+            console.error('Error copying text: ', err);
+        });
+}
+
 // Ensure the DOM is fully loaded before executing the function
 $(document).ready(function() {
     initializeDropdown();
+    toggleCopyButton();
 });
