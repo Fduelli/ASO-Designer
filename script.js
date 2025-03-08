@@ -50,7 +50,7 @@ function editSequenceGapmer() {
         }
     }
 
-    document.getElementById('output').innerText = `IDT Annotated Sequence: ${ideSeq}`;
+    document.getElementById('output').innerText = `${ideSeq}`;
 }
 
 function initializeDropdown() {
