@@ -7,7 +7,7 @@ function editSequence() {
     }else if (type.substring(0,1) === "G") {
         editSequenceGapmer();
     }
-    const outText = document.getElementById('output-text');
+    const outText = document.getElementById('output');
     outText.classList.remove('d-none');
     const copyButton = document.getElementById('copyButton');
     copyButton.classList.remove('d-none');
