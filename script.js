@@ -7,6 +7,8 @@ function editSequence() {
     }else if (type.substring(0,1) === "G") {
         editSequenceGapmer();
     }
+    const outText = document.getElementById('output-text');
+    outText.classList.remove('d-none');
     const copyButton = document.getElementById('copyButton');
     copyButton.classList.remove('d-none');
 }
@@ -26,7 +28,7 @@ function editSequenceMOE() {
         }
     }
 
-    document.getElementById('output').innerText = `IDT Annotated Sequence: ${ideSeq}`;
+    document.getElementById('output').innerText = `${ideSeq}`;
 }
 
 function editSequenceGapmer() {
