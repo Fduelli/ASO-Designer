@@ -1,7 +1,7 @@
 
 
 function editSequence() {
-    let type = document.getElementById('dropdownMenuButton').text;
+    let type = document.getElementById('dropdownMenuButton').innerText;
     if(type.substring(0,1).equals("2")) {
         editSequenceMOE();
     }else if (type.susbtring(0,1).equals("G")) {
