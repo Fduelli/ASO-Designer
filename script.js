@@ -24,7 +24,7 @@ function editSequenceMOE() {
         }
     }
 
-    document.getElementById('output').innerText = `IDE Annotated Sequence: ${ideSeq}`;
+    document.getElementById('output').innerText = `IDT Annotated Sequence: ${ideSeq}`;
 }
 
 function editSequenceGapmer() {
@@ -45,6 +45,8 @@ function editSequenceGapmer() {
             ideSeq += sequenceInput.substring(i, i+1) + "*";
         }
     }
+
+    document.getElementById('output').innerText = `IDT Annotated Sequence: ${ideSeq}`;
 }
 
 function initializeDropdown() {
