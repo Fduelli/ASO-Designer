@@ -7,6 +7,8 @@ function editSequence() {
     }else if (type.substring(0,1) === "G") {
         editSequenceGapmer();
     }
+    const copyButton = document.getElementById('copyButton');
+    copyButton.classList.remove('d-none');
 }
 
 function editSequenceMOE() {
