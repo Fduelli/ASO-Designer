@@ -4,7 +4,7 @@ function editSequence() {
     let type = document.getElementById('dropdownMenuButton').innerText;
     if(type.substring(0,1) === "2") {
         editSequenceMOE();
-    }else if (type.susbtring(0,1) === "G") {
+    }else if (type.substring(0,1) === "G") {
         editSequenceGapmer();
     }
 }
