@@ -7,7 +7,8 @@ function editSequence() {
     }else if (type.substring(0,1) === "G") {
         editSequenceGapmer();
     }
-    toggleCopyButton();
+    const copyButton = document.getElementById('copyButton');
+    copyButton.classList.remove('d-none');
 }
 
 function editSequenceMOE() {
@@ -55,11 +56,6 @@ function initializeDropdown() {
         var selectedText = $(this).text();
         $('#dropdownMenuButton').text(selectedText);
     });
-}
-
-function toggleCopyButton() {
-    const copyButton = document.getElementById('copyButton');
-    copyButton.classList.remove('d-none');
 }
 
 function copyTextToClipboard() {
