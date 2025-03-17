@@ -46,7 +46,11 @@ function editSequenceGapmer() {
                 ideSeq += "/i2MOEr" + sequenceInput.substring(i, i+1) + "/*";
             }
         }else {
-            ideSeq += sequenceInput.substring(i, i+1) + "*";
+            if(sequenceInput.substring(i, i+1) == "C") {
+                ideSeq += "/iMe-d" + sequenceInput.substring(i, i+1) + "/*";
+            }else {
+                ideSeq += sequenceInput.substring(i, i+1) + "*";
+            }
         }
     }
 
