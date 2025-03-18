@@ -37,7 +37,7 @@ function editSequenceGapmer() {
     let ideSeq = "";
     let length = sequenceInput.length
     for(let i = 0; i <length; i++) {
-        if(i<5 || i > length-5) {
+        if(i<5 || i > length-6) {
             if (i==0) {
                 ideSeq += "/52MOEr" + sequenceInput.substring(i, i+1) + "/*";
             } else if (i==length-1) {
