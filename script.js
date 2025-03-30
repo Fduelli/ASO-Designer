@@ -11,6 +11,8 @@ function editSequence() {
     outText.classList.remove('d-none');
     const copyButton = document.getElementById('copyButton');
     copyButton.classList.remove('d-none');
+    const resultTitle = document.getElementById('outLabel');
+    resultTitle.classList.remove('d-none');
 }
 
 function editSequenceMOE() {
