@@ -77,6 +77,40 @@ function copyTextToClipboard() {
         });
 }
 
+function reverseComplement() {
+    let targSequence = document.getElementById('sequenceInput').value.toUpperCase();
+    targSequence = reverseSequence(targSequence);
+    targSequence = complementSequence(targSequence);
+    writeTextToInput(targSequence);
+}
+
+function writeTextToInput(str) {
+    var inputElement = document.getElementById('sequenceInput');
+    inputElement.value = str;
+}
+
+function reverseSequence(targSequence) {
+    var split = targSequence.split("");
+    split = split.reverse();
+    targSequence = split.join("");
+    return targSequence;
+}
+
+function complementSequence(targSequence) {
+    var split = targSequence.split("");
+    for(i = 0; i < split.length; i++) {
+        switch(split[i]) {
+            case "A": split[i] = "T"; break;
+            case "T": split[i] = "A"; break;
+            case "C": split[i] = "G"; break;
+            case "G": split[i] = "C"; break;
+            default: break;
+        }
+    }
+    targSequence = split.join("");
+    return targSequence;
+}
+
 // Ensure the DOM is fully loaded before executing the function
 $(document).ready(function() {
     initializeDropdown();

@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDT Annotation Converter</title>
+    <title>ASO Designer</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">IDT Annotation Converter</h1>
+        <h1 class="text-center">ASO Designer</h1>
         <div class="form-group">
             <label for="sequenceInput">Enter nucleotide sequence</label>
             <textarea id="sequenceInput" class="form-control" rows="4" placeholder="Enter nucleotide sequence"></textarea>
         </div>
         <div class = "container">
-            <div class="row justify-content-between">
-                <button class="btn btn-primary" onclick="editSequence()">Convert to IDT Sequence</button>
-                <div class="dropdown">
+            <div class="row justify-content-end">
+                <div class="dropdown mr-2">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Select ASO Type
                     </button>
@@ -26,7 +25,11 @@
                       <a class="dropdown-item" href="#" data-value = "2'MOE">2'MOE</a>
                       <a class="dropdown-item" href="#" data-value = "Gapmer">Gapmer</a>
                     </div>
-                </div>
+                </div> 
+                <div class="btn btn-secondary"  onclick="reverseComplement()">Reverse Complement</div>
+            </div>
+            <div class="row justify-content-start">
+                <button class="btn btn-primary" onclick="editSequence()">Convert to IDT Sequence</button>
             </div>
         </div>
         <div id = "output-text" class = "form-group"></div>
